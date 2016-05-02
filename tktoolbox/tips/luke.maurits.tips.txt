@@ -1,0 +1,92 @@
+Tkinter tips and tricks
+
+  First published: June 29, 2007
+  Last updated: April 12, 2012
+
+  Tkinter is a Python interface to the Tk GUI toolkit. It is included as
+  a part of the standard Python distribution and works on any platform
+  that Python does, making it a popular choice for no-fuss, portable GUIs
+  for Python programs. Unfortunately, there are more than a few things
+  about Tkinter which are unintuitive, easy to miss and even easier to
+  forget. I don't do GUI programming all that often, so often find myself
+  having to look up how to do things that I'm sure I knew how to do the
+  last time I used Tkinter. Now whenever I learn how to do something in
+  Tkinter which I think I'm likely to forget, I make a note of it on this
+  page for easy reference later. Hopefully it is helpful to other Python
+  hackers as well. There's a list of links to other helpful Tkinter sites
+  at the end, too.
+    * [1]Images
+         + [2]My images don't show up, but Python doesn't complain"
+    * [3]Links
+
+Geometry management
+
+ I'm using the grid manager, and my widgets aren't resizing the way I expect
+
+  Foo.
+
+Images
+
+ My images don't show up, but Python doesn't complain
+
+  This is apparently a common problem for Tkinter beginners. You've
+  written some code like this:
+image = PhotoImage(file="/path/to/image.gif")
+Label(frame,image=image,bg='yellow').pack()
+
+  and you can't figure out why your image isn't showing up. You've double
+  checked the filename, and Python isn't giving you any error messages,
+  so what's the deal?
+
+  The deal is that your image is being loaded just fine, but it's being
+  garbage collected immediately afterward. Simply passing the image to a
+  Label or Frame widget's constructor as its image keyword argument does
+  not cause Tkinter to keep a reference to the image lying around. As
+  soon as the image variable falls out of scope - which will happen if
+  the above code is part of a function/class method - the image is
+  garbage collected and so obviously cannot be displayed.
+
+  The solution is simply to make sure there is a persistent reference to
+  your PhotoImage object so that it does not get garbage collected. If
+  you're creating the image containing widget as a part of a class, just
+  make the image an attribute of the class:
+self.image = PhotoImage(file="/path/to/image.gif")
+Label(frame,image=self.image,bg='yellow').pack()
+
+  If you're not creating the image as part of a class, you can use a
+  global variable to refer to the PhotoImage object, although this is
+  kind of ugly:
+global image
+image = PhotoImage(file="/path/to/image.gif")
+Label(frame,image=image,bg='yellow').pack()
+
+ I want to put an image and text on a button
+
+  Including an image on a Tkinter Button widget is fairly
+  straightforward. It just looks like this:
+global icon
+icon=PhotoImage(file="/path/to/image.gif")
+Button(frame,text="Caption",image=icon).pack()
+
+  The problem is that when you combine this with text on your button, the
+  result is kind of ugly:
+
+  The solution is to use the compound keyword, which controls the
+  placement of the image relative to the text. E.g., to make the image
+  appear above the text, set compound to TOP:
+global icon
+icon=PhotoImage(file="/path/to/image.gif")
+Button(frame,text="Caption",image=icon,compound=TOP).pack()
+
+  Which produces:
+
+  Similarly, you can set compound to BOTTOM to get the image appearing
+  below the text, set it to TOP. The ugly side-by-side effect that is the
+  default can be achieved with a setting of LEFT or RIGHT. You can even
+  set it to CENTER, which will lay the text over the image:
+
+References
+
+  1. file:///home/luke/www.luke.maurits.id.au/gopher/writing/tkinter-tips-and-tricks.html#images
+  2. file:///home/luke/www.luke.maurits.id.au/gopher/writing/disappearingimages
+  3. file:///home/luke/www.luke.maurits.id.au/gopher/writing/tkinter-tips-and-tricks.html#links

@@ -1,0 +1,12 @@
+Question:
+I am just starting with Python.
+When I use Tk, a blank dialog always opens up behind tkMessageBox or whatever other GUI element that one executes.
+Is their a way of disabling this?
+
+Answer:
+
+The "blank dialog" is Tkinter's root window.
+To eliminate that, explicitly create a root and withdraw it before proceeding:
+
+       root = Tkinter.Tk()
+       root.withdraw()

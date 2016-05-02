@@ -1,0 +1,12 @@
+Tk variables (StringVar, IntVar, BooleanVar and DoubleVar) have several uses including live update of widget contents (change the variable, the widget updates) and executing callback functions when the value of the variable is changed. Live update of widgets is straightforward: simply specify the variable as an option (usually named "textvariable") when creating or configuring the widget. Traces are described here.
+
+To trace a changed value, use the trace_variable method. Details:
+
+When you set up the trace you specify one of these modes: "w" (write), "r" (read) and "u" (undefine).
+You also specify a callback function. This function will receive three arguments (by position, not by name):
+The name of the Tk variable. This is not the Tk variable object itself, but you can use the name to get or set the value via root.globalgetvar(name) and root.globalsetvar(name). Unfortunately, I have not found any way to obtain the actual Tk variable object from its name; root.nametowidget(varName) does not seem to work for Tk variables.
+The variable index, if the Tk variable is an array, else an empty string. I have no idea how to create a Tk variable array in Tkinter (but it is easy in Tk). If you figure it out, you can then determine if the index is a string representation of an integer, or an integer (my guess is it's a string).
+The access mode, one of "w", "r" or "u".
+The callback function may modify the value in the variable, and such modification will not trigger additional callbacks.
+The trace is active until you delete it.
+trace_variable returns a string that identifies the trace. You will need this string to delete the trace; call trace_vdelete.
