@@ -1,0 +1,11 @@
+Warnings:
+
+The option database stores the name of the named font (not the Font object
+itself). To create a font object from a font name use tkFont.Font(name=...,
+exists=True).
+
+If your original tkFont.Font object goes away (or any Font object
+not created using exists=True) then the tk named font is also deleted. This is
+to prevent memory leaks but it may catch you off guard if you decide to recreate
+Font objects only when needed. If using tkFont.Font objects to configure widgets
+always hold onto your original objects!

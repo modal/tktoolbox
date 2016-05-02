@@ -1,0 +1,17 @@
+https://docs.python.org/3/library/tk.html
+http://www.ferg.org/thinking_in_tkinter/all_programs.html
+http://thinkingtkinter.sourceforge.net/
+http://infohost.nmt.edu/tcc/help/pubs/tkinter.pdf
+https://wiki.python.org/moin/TkInter
+http://www.slideshare.net/r1chardj0n3s/tkinter-does-not-suck
+https://staff.washington.edu/rowen/TkinterSummary.html
+https://github.com/r-owen/RO
+https://staff.washington.edu/rowen/ROPackage/Overview.html
+http://boscoh.com/programming/command-line-utilities-for-everybody-else.html
+https://github.com/boscoh/tkform
+http://effbot.org/tkinterbook/wm.htm
+
+Bryan Oakley:
+https://stackoverflow.com/search?q=user:7432+[tkinter]
+
+https://docs.python.org/2/using/mac.html

@@ -1,0 +1,15 @@
+Hiding Widgets
+
+To hide a widget you have to make the geometry manager forget about it. For the
+packer that is widget.pack_forget(), which forgets all about where the widget
+goes -- a potential pain when it comes time to show the widget again. For grid
+there's a nicer method widget.grid_remove() that remembers the grid settings for
+the widget, so you can show it again by simply using widget.grid().
+
+Problem: an enclosing frame will shrink as widgets are removed until it contains
+only one widget; when you remove that one the frame does not shrink further (at
+least this is true on a Mac using MacPython 2.0) This is a pain if you wish to
+be able to remove all widgets from a frame and have it shrink to zero. The cheap
+fix is to include an empty (hence tiny) frame in the enclosing frame and never
+remove that. The enclosing frame will then shrink to basically nothing (the size
+of the empty frame) when the last visible widget is removed.
