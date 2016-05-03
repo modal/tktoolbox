@@ -34,6 +34,11 @@ http://tkinter.unpythonic.net/wiki/
 http://effbot.org/zone/wck-1.htm
 http://pmw.sourceforge.net/doc/index.html
 
+The tk widget demonstration is really good and should be copied into Tkinter.
+
+# Check this out!!!
+https://github.com/daleathan/widget-tour-py3
+
 
 Bryan Oakley:
 https://stackoverflow.com/search?q=user:7432+[tkinter]
