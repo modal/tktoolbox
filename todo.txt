@@ -10,6 +10,29 @@ https://staff.washington.edu/rowen/ROPackage/Overview.html
 http://boscoh.com/programming/command-line-utilities-for-everybody-else.html
 https://github.com/boscoh/tkform
 http://effbot.org/tkinterbook/wm.htm
+http://www.tutorialspoint.com/tcl-tk/tk_windows_manager.htm
+https://stackoverflow.com/questions/6721469/checkbuttons-with-multiple-tkinter-windows?rq=1
+https://stackoverflow.com/questions/5973371/setting-window-styles-with-tkinter-tcl-no-exit-button?rq=1
+https://stackoverflow.com/questions/4066202/resizing-pictures-in-pil-in-tkinter?rq=1
+https://stackoverflow.com/questions/3295659/how-do-i-get-a-windows-border-like-this-in-tkinter?rq=1
+https://stackoverflow.com/questions/20959914/python-tkinter-canvas-transparent?rq=1
+https://stackoverflow.com/questions/23876447/tkinter-overlay-foreground-image-on-top-of-a-background-image-with-transparency?rq=1
+https://stackoverflow.com/questions/20370864/no-transparency-in-animated-gif-with-tkinter?rq=1
+https://stackoverflow.com/questions/8448690/python-tkinter-having-trouble-with-resizing-multiple-grids?rq=1
+https://stackoverflow.com/questions/3270209/how-do-i-make-tkinter-support-png-transparency?rq=1
+http://effbot.org/tkinterbook/tkinter-events-and-bindings.htm
+http://effbot.org/tkinterbook/tkinter-index.htm#class-reference
+
+http://computer-programming-forum.com/57-tcl/fe5f1d4094694f68.htm
+http://togl.sourceforge.net/
+http://effbot.org/tkinterbook/canvas.htm
+https://groups.google.com/forum/#!topic/comp.lang.tcl/rthP-Hk0UPU
+http://tkinter.unpythonic.net/wiki/BWidgets
+http://tkinter.unpythonic.net/bwidget/
+https://code.activestate.com/lists/python-tkinter-discuss/
+http://tkinter.unpythonic.net/wiki/
+http://effbot.org/zone/wck-1.htm
+
 
 Bryan Oakley:
 https://stackoverflow.com/search?q=user:7432+[tkinter]
