@@ -1,0 +1,27 @@
+In Tkinter, event.type contains a numeric code. You can map back from int(event.type) to the event name:
+
+{  2: "KeyPress",
+   3: "KeyRelease",
+   4: "ButtonPress",
+   5: "ButtonRelease",
+   6: "Motion",
+   7: "Enter",
+   8: "Leave",
+   9: "FocusIn",
+   10: "FocusOut",
+   12: "Expose",
+   15: "Visibility",
+   17: "Destroy",
+   18: "Unmap",
+   19: "Map",
+   21: "Reparent",
+   22: "Configure",
+   24: "Gravity",
+   26: "Circulate",
+   28: "Property",
+   32: "Colormap",
+   36: "Activate",
+   37: "Deactivate",
+   38: "MouseWheel"
+}
+

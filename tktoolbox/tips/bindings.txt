@@ -1,0 +1,24 @@
+Tkinter matches Tk quite closely, and there's no way to get *all* bindings
+for a standard widget with a single call at the Tk level (afaik).
+
+to extract this information from a Tkinter widget, you should first call
+bindtags() on the widget to get a list of binding classes used for this widget,
+and you can then use bind_class(cls) to get the events for that class.
+
+to get all events, you can use something like:
+
+>>> from Tkinter import Button
+>>> b = Button()
+>>> bindings = set()
+>>> for cls in b.bindtags():
+
+...     bindings |= set(b.bind_class(cls))  # s |= t means: update set s, adding elements from t
+...
+>>> bindings
+
+set(['<Alt-KeyRelease>', '<Leave>', '<Enter>', '<KeyRelease-Alt_L>',
+'<Key-Alt_R>', '<<PrevWindow>>', '<Key-F10>', '<KeyRelease-F10>',
+'<Key-space>', '<Alt-Key>', '<Button-1>', '<ButtonRelease-1>',
+'<KeyRelease-Alt_R>', '<Key-Tab>', '<Key-Alt_L>'])
+
+</F>

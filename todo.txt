@@ -32,6 +32,7 @@ http://tkinter.unpythonic.net/bwidget/
 https://code.activestate.com/lists/python-tkinter-discuss/
 http://tkinter.unpythonic.net/wiki/
 http://effbot.org/zone/wck-1.htm
+http://pmw.sourceforge.net/doc/index.html
 
 
 Bryan Oakley:
