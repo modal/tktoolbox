@@ -40,7 +40,19 @@ The tk widget demonstration is really good and should be copied into Tkinter.
 https://github.com/daleathan/widget-tour-py3
 
 
+http://techtinkering.com/2012/06/26/embedding-an-sdl-surface-in-a-tk-window/
+https://code.activestate.com/recipes/579070-simple-audio-with-ctypes-and-sdl-also-for-tkinter/
+https://github.com/LawrenceWoodman/sdl_and_tk_demo
+https://www.libsdl.org/projects/tcl-demo/
+http://www-users.cs.umn.edu/~mein/game/
+
+An introduction to Tkinter - Jeff Armstrong
+https://github.com/ArmstrongJ/presentations/tree/master/pyohio2012/src
+
+
 Bryan Oakley:
 https://stackoverflow.com/search?q=user:7432+[tkinter]
 
 https://docs.python.org/2/using/mac.html
+
+http://members.shaw.ca/tnbaker/SDLTk/
